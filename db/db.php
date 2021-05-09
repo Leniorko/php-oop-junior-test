@@ -7,4 +7,8 @@ function initAndReturnDatabase(){
     
     return $databaseConnection;
 }
+
+function joinTask($databaseConnection){
+    $databaseConnection->query("SELECT DISTINCT *  FROM users JOIN objects ON users.object_id = objects.id");
+}
 ?>
